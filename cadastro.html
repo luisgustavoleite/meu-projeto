@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se para ser voluntário ou doador da ONG">
+    <title>ONG TransformaVidas - Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo ONG TransformaVidas" width="150">
+            </div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cadastro-intro">
+            <h1>Junte-se à Nossa Causa</h1>
+            <p>Preencha o formulário abaixo para se cadastrar como voluntário ou doador</p>
+        </section>
+
+        <section class="formulario-cadastro">
+            <form id="formCadastro" novalidate>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div class="campo-grupo">
+                        <label for="nomeCompleto">Nome Completo *</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" required minlength="5" maxlength="100">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="cpf">CPF *</label>
+                        <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="dataNascimento">Data de Nascimento *</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    
+                    <div class="campo-grupo">
+                        <label for="cep">CEP *</label>
+                        <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="endereco">Endereço *</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="estado">Estado *</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como deseja ajudar?</legend>
+                    
+                    <div class="campo-grupo">
+                        <label>
+                            <input type="checkbox" name="tipoAjuda" value="voluntario">
+                            Voluntariado
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tipoAjuda" value="doador">
+                            Doações Financeiras
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tipoAjuda" value="material">
+                            Doações de Materiais
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tipoAjuda" value="divulgacao">
+                            Divulgação
+                        </label>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="mensagem">Mensagem (opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre sua motivação para ajudar..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar Cadastro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ONG TransformaVidas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
