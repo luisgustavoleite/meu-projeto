@@ -1,0 +1,128 @@
+/* ===== SISTEMA DE DESIGN ===== */
+:root {
+  /* Paleta de Cores - 8+ cores */
+  --color-primary: #2C5530;
+  --color-primary-light: #4A7C59;
+  --color-primary-dark: #1F3A24;
+  --color-primary-rgb: 44, 85, 48;
+  
+  --color-secondary: #3498DB;
+  --color-secondary-light: #5DADE2;
+  --color-secondary-dark: #2980B9;
+  --color-secondary-rgb: 52, 152, 219;
+  
+  --color-accent: #E74C3C;
+  --color-accent-light: #EC7063;
+  --color-accent-dark: #C0392B;
+  --color-accent-rgb: 231, 76, 60;
+  
+  --color-success: #27AE60;
+  --color-warning: #F39C12;
+  --color-error: #E74C3C;
+  --color-info: #3498DB;
+  
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #F8F9FA;
+  --color-neutral-300: #E9ECEF;
+  --color-neutral-400: #DEE2E6;
+  --color-neutral-500: #6C757D;
+  --color-neutral-600: #495057;
+  --color-neutral-700: #343A40;
+  --color-neutral-800: #212529;
+  --color-neutral-900: #121416;
+
+  /* Tipografia Hierárquica */
+  --font-family-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Georgia', 'Times New Roman', serif;
+  --font-family-mono: 'Courier New', monospace;
+  
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.6;
+  --line-height-loose: 1.75;
+
+  /* Sistema de Espaçamento Modular */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+  --space-5: 3rem;     /* 48px */
+  --space-6: 4rem;     /* 64px */
+  --space-7: 6rem;     /* 96px */
+  --space-8: 8rem;     /* 128px */
+  
+  /* Bordas e Sombras */
+  --border-radius-sm: 0.25rem;  /* 4px */
+  --border-radius: 0.5rem;      /* 8px */
+  --border-radius-lg: 1rem;     /* 16px */
+  --border-radius-xl: 1.5rem;   /* 24px */
+  --border-radius-full: 50%;
+  
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --border-width-thicker: 4px;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Transições e Animações */
+  --transition: all 0.3s ease;
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s ease;
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  --animation-duration: 0.3s;
+  --animation-timing: ease;
+
+  /* Z-index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+/* Modo escuro (para futuras implementações) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-neutral-100: #121416;
+    --color-neutral-200: #212529;
+    --color-neutral-300: #343A40;
+    --color-neutral-400: #495057;
+    --color-neutral-500: #6C757D;
+    --color-neutral-600: #ADB5BD;
+    --color-neutral-700: #CED4DA;
+    --color-neutral-800: #E9ECEF;
+    --color-neutral-900: #F8F9FA;
+  }
+}
