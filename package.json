@@ -1,0 +1,37 @@
+{
+  "name": "plataforma-ong",
+  "version": "1.0.0",
+  "description": "Plataforma web completa para ONGs - Projeto Acadêmico",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "npm run minify:css && npm run minify:js && npm run minify:html",
+    "minify:css": "cleancss -o css/style.min.css css/style.css css/variables.css css/layout.css css/navigation.css css/components.css css/responsive.css css/high-contrast.css",
+    "minify:js": "uglifyjs js/*.js -o js/app.min.js -c -m",
+    "minify:html": "html-minifier --input-dir . --output-dir ./dist --file-ext html --remove-comments --collapse-whitespace",
+    "optimize:images": "imagemin img/* --out-dir=img/optimized",
+    "validate:html": "html-validate *.html",
+    "validate:accessibility": "pa11y http://localhost:3000",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "ong",
+    "plataforma",
+    "acessibilidade",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.0",
+    "uglify-js": "^3.17.0",
+    "html-minifier": "^4.0.0",
+    "imagemin-cli": "^7.0.0",
+    "live-server": "^1.2.2",
+    "html-validate": "^7.0.0",
+    "pa11y": "^6.2.3",
+    "gh-pages": "^4.0.0"
+  }
+}
